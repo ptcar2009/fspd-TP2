@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+package kvs;
+
+// The greeting service definition.
+service Pares {
+  // Sends a greeting
+  rpc Insert (InsertRequest) returns (InsertReply) {}
+  rpc Consult (ConsultRequest) returns (ConsultReply) {}
+  rpc Activate (ActivateRequest) returns (ActivateReply) {}
+  rpc Terminate (TerminateRequest) returns (TerminateReply) {}
+}
+
+// The request message containing the user's name.
+message InsertRequest {
+  uint32 key = 1;
+  string value = 2;
+}
+
+// The response message containing the greetings
+message InsertReply {
+  int32 result = 1;
+}
+
+// The request message containing the user's name.
+message ConsultRequest {
+  uint32 key = 1;
+}
+
+// The response message containing the greetings
+message ConsultReply {
+  string value = 1;
+}
+
+
+
+// The request message containing the user's name.
+message ActivateRequest {
+  string id = 1;
+}
+
+// The response message containing the greetings
+message ActivateReply {
+  uint32 ret = 1;
+}
+
+// The request message containing the user's name.
+message TerminateRequest {
+}
+
+// The response message containing the greetings
+message TerminateReply {
+  uint32 ret = 1;
+}

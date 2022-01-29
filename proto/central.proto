@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.helloworld";
+option java_outer_classname = "HelloWorldProto";
+option objc_class_prefix = "HLW";
+
+package helloworld;
+
+// The greeting service definition.
+service Central {
+  // Sends a greeting
+  rpc Register (RegisterRequest) returns (RegisterReply) {}
+  rpc Terminate (TerminateRequest) returns (TerminateReply) {}
+  rpc Map (MapRequest) returns (MapReply) {}
+
+}
+
+// The request message containing the user's name.
+message RegisterRequest {
+  string id = 1;
+  repeated uint32 keys = 2;
+}
+
+// The response message containing the greetings
+message RegisterReply {
+  int32 result = 1;
+}
+
+// The request message containing the user's name.
+message MapRequest {
+  uint32 key = 1;
+}
+
+// The response message containing the greetings
+message MapReply {
+  string id = 1;
+}
+
+// The request message containing the user's name.
+message TerminateRequest {
+  uint32 key = 1;
+  string value = 2;
+}
+
+// The response message containing the greetings
+message TerminateReply {
+  int32 ret = 1;
+}
