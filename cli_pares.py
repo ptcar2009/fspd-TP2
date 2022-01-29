@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/bin/env python3
 import sys
 import grpc
 import pares_pb2_grpc
@@ -107,7 +107,7 @@ def run():
         exit(1)
     client = ParesImpl(sys.argv[1])
     while(True):
-        command = input('> ').split(',')
+        command = input().split(',')
         if command_dict.get(command[0], help_command)(command, client):
             break
 

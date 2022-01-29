@@ -1,0 +1,114 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "TP2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "proto::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-proto-8679bb68ed1142c3e758.json",
+					"name" : "proto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_cli_central::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_cli_central-d7f620846020855ea56b.json",
+					"name" : "run_cli_central",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_cli_pares::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_cli_pares-cb104d4e6b8cd3b7b7ae.json",
+					"name" : "run_cli_pares",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_serv_central::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_serv_central-f33b93876e44e3fd0b7c.json",
+					"name" : "run_serv_central",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_serv_pares::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_serv_pares-6a6b418b9aa41be0245e.json",
+					"name" : "run_serv_pares",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_serv_pares1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_serv_pares1-44daf1e682dd6a515e9f.json",
+					"name" : "run_serv_pares1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_serv_pares2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_serv_pares2-cee03317aff568ad9c75.json",
+					"name" : "run_serv_pares2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/pteco/ufmg/fspd/TP2",
+		"source" : "/home/pteco/ufmg/fspd/TP2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

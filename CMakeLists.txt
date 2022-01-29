@@ -26,6 +26,7 @@ foreach(_target
     add_custom_target(
         run_${_target}
         COMMAND ./${_target}.py $(arg)
+        DEPENDS ${_PROTO_GENERATED_FILES}
     )
 endforeach()
 

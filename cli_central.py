@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/bin/env python3
 from typing import List
 import central_pb2
 import central_pb2_grpc
@@ -73,7 +73,7 @@ def run():
         exit(1)
     client = CentralImpl(sys.argv[1])
     while(True):
-        command = input('> ').split(',')
+        command = input().split(',')
         if cli_commands.get(command[0], help_command)(command, client):
             break
 

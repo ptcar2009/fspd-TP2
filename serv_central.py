@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/bin/env python3
 from concurrent import futures
 import logging
 import sys
@@ -50,7 +50,7 @@ def serve():
     logging.info("activating server on port %s", sys.argv[1])
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     central_pb2_grpc.add_CentralServicer_to_server(DoStuff(stop_event), server)
-    server.add_insecure_port(f'localhost:{sys.argv[1]}')
+    server.add_insecure_port(f'0.0.0.0:{sys.argv[1]}')
 
     # starting server and waiting for termination request
     server.start()

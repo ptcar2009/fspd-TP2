@@ -1,6 +1,7 @@
-#!/bin/env python
+#!/bin/env python3
 from concurrent import futures
 import logging
+import socket
 import threading
 from cli_central import CentralImpl
 from util import usage
@@ -76,14 +77,14 @@ def serve():
     if len(sys.argv) > 2:
         has_activate = True
 
-    id = "localhost"
+    id = socket.getfqdn()
     logging.info("activating server on port %s", sys.argv[1])
     logging.debug("setting hostname to %s" % id)
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
 
     pares_pb2_grpc.add_ParesServicer_to_server(
         DoStuff(f'{id}:{sys.argv[1]}', stop_event, has_activate), server)
-    server.add_insecure_port(f'localhost:{sys.argv[1]}')
+    server.add_insecure_port(f'0.0.0.0:{sys.argv[1]}')
 
     # starting the server and wating for terminate request
     server.start()
