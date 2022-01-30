@@ -36,7 +36,7 @@ def commands():
     print("Available commands:")
     print("I,key, description - add a key")
     print("C,key - consult a key")
-    print("A, identifier - activate service as identifier")
+    print("A, identifier - activate service on central server <identifier>")
     print("T - terminate")
     pass
 
